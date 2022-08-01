@@ -4,7 +4,6 @@ import numpy as np
 from numpy.typing import ArrayLike, NDArray
 from typing import Tuple, Optional
 import matplotlib.pyplot as plt
-plt.style.use('seaborn-white')
 
 
 def print_chart(canvas: NDArray) -> None:
