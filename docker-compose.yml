@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    bootcamp:
+        build:
+            context: .
+            network: host
+            dockerfile: Dockerfile
+        container_name: quantum_bootcamp
+        volumes:
+            - .:/opt/quantum_bootcamp
