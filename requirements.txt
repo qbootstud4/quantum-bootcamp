@@ -3,5 +3,5 @@ matplotlib
 seaborn
 qiskit
 pylatexenc
-'qiskit[visualization]'
-
+qiskit[visualization]
+jupyterlab
