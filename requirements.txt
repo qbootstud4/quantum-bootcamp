@@ -1,3 +1,7 @@
 numpy
 matplotlib
+seaborn
 qiskit
+pylatexenc
+'qiskit[visualization]'
+
