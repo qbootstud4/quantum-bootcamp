@@ -79,12 +79,8 @@ class SvgCanvas:
         """
         hd.write_html_line(t, f'<svg height="{self.__h}" width="{self.__w}">')
         for figure in figures:
-            if isinstance(figure, Circle):
-                figure.draw_circle_line(hd, t * 2)
-            elif isinstance(figure, Rectangle):
-                figure.draw_rectangle_line(hd, t * 2)
-            elif isinstance(figure, Ellipse):
-                figure.draw_ellipse_line(hd, t * 2)
+            figure.draw_shape_line(hd, t * 2)
+
         hd.write_html_line(t, f'</svg>')
 
 
@@ -123,7 +119,7 @@ class Circle(Shape):
         super().__init__(point, color, op)
         self.__rad: int = rad
 
-    def draw_circle_line(self, hd: HtmlDoc, t: int) -> None:
+    def draw_shape_line(self, hd: HtmlDoc, t: int) -> None:
         """
         draw a circle
         :param hd:
@@ -150,7 +146,7 @@ class Rectangle(Shape):
         self.__width: int = width
         self.__height: int = height
 
-    def draw_rectangle_line(self, hd: HtmlDoc, t: int) -> None:
+    def draw_shape_line(self, hd: HtmlDoc, t: int) -> None:
         """
         draw a rectangle
         :param hd:
@@ -177,7 +173,7 @@ class Ellipse(Shape):
         self.__rx: int = rx
         self.__ry: int = ry
 
-    def draw_ellipse_line(self, hd: HtmlDoc, t: int) -> None:
+    def draw_shape_line(self, hd: HtmlDoc, t: int) -> None:
         """
         draw an ellipse
         :param hd:
