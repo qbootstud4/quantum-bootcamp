@@ -122,7 +122,6 @@ class Circle(Shape):
         """
         super().__init__(point, color, op)
         self.__rad: int = rad
-        print(self.x)
 
     def draw_circle_line(self, hd: HtmlDoc, t: int) -> None:
         """
