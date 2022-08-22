@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Assignment 2 Part 3"""
 
-from typing import IO
+from typing import IO, NamedTuple
 from collections import namedtuple
 from random import randint, uniform
 from dataclasses import dataclass
@@ -86,8 +86,8 @@ class SvgCanvas:
 
 
 # shorten shape parameters using namedtuples
-Point = namedtuple('Point', 'x y')
-Color = namedtuple('Color', 'red green blue')
+Point: NamedTuple = namedtuple('Point', 'x y')
+Color: NamedTuple = namedtuple('Color', 'red green blue')
 
 
 class Shape:
@@ -271,8 +271,8 @@ class GenRandom:
         return round(uniform(a, b), 1)
 
 
-Canvas: namedtuple = namedtuple('Canvas', 'w h')
-Specs: namedtuple = namedtuple('Props', 'shape x y rad rx ry width height red green blue op')
+Canvas: NamedTuple = namedtuple('Canvas', 'w h')
+Specs: NamedTuple = namedtuple('Props', 'shape x y rad rx ry width height red green blue op')
 
 
 class Batch:
@@ -314,7 +314,7 @@ class Batch:
 
 
 def main() -> None:
-    canvas: namedtuple = Canvas(800, 500)
+    canvas: NamedTuple = Canvas(800, 500)
     for i in range(1, 4):
         hd: HtmlDoc = HtmlDoc(f"a2-3{i}.html", f"MyPart{i}")
         hd.open_html_file()

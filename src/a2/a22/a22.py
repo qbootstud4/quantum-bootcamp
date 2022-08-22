@@ -3,6 +3,7 @@
 from random import randint, uniform
 from dataclasses import dataclass
 from collections import namedtuple
+from typing import NamedTuple
 
 
 @dataclass
@@ -52,7 +53,7 @@ class GenRandom:
         return round(uniform(a, b), 1)
 
 
-Canvas = namedtuple('Canvas', 'w h')
+Canvas: NamedTuple = namedtuple('Canvas', 'w h')
 
 
 class SvgTable:

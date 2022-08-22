@@ -3,6 +3,7 @@
 
 from typing import IO
 from collections import namedtuple
+from typing import NamedTuple
 
 
 class HtmlDoc:
@@ -85,8 +86,8 @@ class SvgCanvas:
 
 
 # shorten shape parameters using namedtuples
-Point = namedtuple('Point', 'x y')
-Color = namedtuple('Color', 'red green blue')
+Point: NamedTuple = namedtuple('Point', 'x y')
+Color: NamedTuple = namedtuple('Color', 'red green blue')
 
 
 class Shape:
